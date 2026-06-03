@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Lucca Auto-Fichaje",
+  "version": "1.0",
+  "description": "Automatiza el registro de horas en Timmi Timesheet",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.ilucca.net/timmi-timesheet/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
